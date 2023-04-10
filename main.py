@@ -8,10 +8,11 @@ app = FastAPI()
 
 
 #this code is for query to database
+#new session to the db for the new request
 def get_db():
     db = SessionLocal()
     try:
-      yield db
+      yield db #return db
     finally:
       db.close()
       

@@ -7,7 +7,7 @@ class PostBase(BaseModel):
     text : str
     
 class Post(PostBase):
-    id = int
+    id : int
     class Config:
         orm_mode = True
     
